@@ -2,7 +2,7 @@ databases:
   - name: operations-db
     plan: free
     databaseName: operations
-    user: postgres
+    user: opsadmin
 
 services:
   # ── Backend (FastAPI — native Python runtime) ─────────────────────────────
