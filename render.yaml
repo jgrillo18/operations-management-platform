@@ -2,13 +2,14 @@ databases:
   - name: operations-db
     plan: free
     databaseName: operations
-    user: opsadmin
+    user: postgres
 
 services:
   # ── Backend (FastAPI — native Python runtime) ─────────────────────────────
   - type: web
     name: operations-backend
     env: python
+    plan: free
     rootDir: backend
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
@@ -24,6 +25,7 @@ services:
   - type: web
     name: operations-frontend
     env: static
+    plan: free
     rootDir: frontend
     buildCommand: npm ci && npm run build
     staticPublishPath: dist
