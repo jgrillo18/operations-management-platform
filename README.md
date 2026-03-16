@@ -6,6 +6,19 @@ Enterprise platform for digitalizing internal operations — built with **FastAP
 ![Stack](https://img.shields.io/badge/Frontend-React-61DAFB?style=flat-square&logo=react)
 ![Stack](https://img.shields.io/badge/Database-PostgreSQL-336791?style=flat-square&logo=postgresql)
 ![Stack](https://img.shields.io/badge/Infra-Docker-2496ED?style=flat-square&logo=docker)
+![Deploy](https://img.shields.io/badge/Live-Render-46E3B7?style=flat-square&logo=render)
+
+---
+
+## 🚀 Live Demo
+
+| Service | URL |
+|---------|-----|
+| **Frontend** | https://operations-frontend.onrender.com |
+| **Backend API** | https://operations-management-platform-1.onrender.com |
+| **API Docs (Swagger)** | https://operations-management-platform-1.onrender.com/docs |
+
+> **Note:** The free tier on Render spins down after inactivity. First load may take ~30 seconds to wake up.
 
 ---
 
