@@ -53,6 +53,6 @@ app.include_router(request_router)
 app.include_router(audit_router)
 
 
-@app.get("/health", tags=["Health"])
+@app.api_route("/health", methods=["GET", "HEAD"], tags=["Health"])
 def health_check():
     return {"status": "ok"}
