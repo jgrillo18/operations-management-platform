@@ -1,3 +1,4 @@
+import os
 import time
 import logging
 
@@ -37,12 +38,17 @@ app = FastAPI(
     version="1.0.0",
 )
 
+_raw = os.getenv("ALLOWED_ORIGINS", "")
+_extra = [o.strip() for o in _raw.split(",") if o.strip()]
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
         "http://localhost:3000",
         "http://localhost",
+        "https://operations-frontend.onrender.com",
+        *_extra,
     ],
     allow_credentials=True,
     allow_methods=["*"],
